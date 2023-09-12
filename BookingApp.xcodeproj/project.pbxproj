@@ -13,6 +13,8 @@
 		FF2519132AB0AE3E00566A31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2519122AB0AE3E00566A31 /* Preview Assets.xcassets */; };
 		FF25191C2AB0AF9B00566A31 /* HotelScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25191B2AB0AF9B00566A31 /* HotelScreenView.swift */; };
 		FF2519232AB0B17100566A31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF2519252AB0B17100566A31 /* Localizable.strings */; };
+		FF2519282AB0B9A500566A31 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FF2519272AB0B9A500566A31 /* SDWebImageSwiftUI */; };
+		FF25192A2AB0B9D800566A31 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2519292AB0B9D800566A31 /* ImageCarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,7 @@
 		FF2519122AB0AE3E00566A31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF25191B2AB0AF9B00566A31 /* HotelScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelScreenView.swift; sourceTree = "<group>"; };
 		FF2519242AB0B17100566A31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FF2519292AB0B9D800566A31 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2519282AB0B9A500566A31 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +62,8 @@
 				FF25190B2AB0AE3D00566A31 /* BookingApp.swift */,
 				FF25190D2AB0AE3D00566A31 /* ContentView.swift */,
 				FF2519202AB0B00E00566A31 /* Coordinator */,
-				FF25191F2AB0B00000566A31 /* Models */,
 				FF2519192AB0AF4700566A31 /* Components */,
+				FF25191F2AB0B00000566A31 /* Models */,
 				FF25191A2AB0AF6C00566A31 /* HotelScreen */,
 				FF25191D2AB0AFA400566A31 /* Resources */,
 				FF2519112AB0AE3E00566A31 /* Preview Content */,
@@ -78,6 +82,7 @@
 		FF2519192AB0AF4700566A31 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FF2519292AB0B9D800566A31 /* ImageCarouselView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -137,6 +142,9 @@
 			dependencies = (
 			);
 			name = BookingApp;
+			packageProductDependencies = (
+				FF2519272AB0B9A500566A31 /* SDWebImageSwiftUI */,
+			);
 			productName = BookingApp;
 			productReference = FF2519082AB0AE3D00566A31 /* BookingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +173,9 @@
 				Base,
 			);
 			mainGroup = FF2518FF2AB0AE3D00566A31;
+			packageReferences = (
+				FF2519262AB0B9A500566A31 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = FF2519092AB0AE3D00566A31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +205,7 @@
 			files = (
 				FF25190E2AB0AE3D00566A31 /* ContentView.swift in Sources */,
 				FF25190C2AB0AE3D00566A31 /* BookingApp.swift in Sources */,
+				FF25192A2AB0B9D800566A31 /* ImageCarouselView.swift in Sources */,
 				FF25191C2AB0AF9B00566A31 /* HotelScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FF2519262AB0B9A500566A31 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FF2519272AB0B9A500566A31 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF2519262AB0B9A500566A31 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FF2519002AB0AE3D00566A31 /* Project object */;
 }
