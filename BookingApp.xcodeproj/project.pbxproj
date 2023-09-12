@@ -8,24 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		FF25190C2AB0AE3D00566A31 /* BookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25190B2AB0AE3D00566A31 /* BookingApp.swift */; };
-		FF25190E2AB0AE3D00566A31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25190D2AB0AE3D00566A31 /* ContentView.swift */; };
 		FF2519102AB0AE3E00566A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF25190F2AB0AE3E00566A31 /* Assets.xcassets */; };
 		FF2519132AB0AE3E00566A31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2519122AB0AE3E00566A31 /* Preview Assets.xcassets */; };
 		FF25191C2AB0AF9B00566A31 /* HotelScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25191B2AB0AF9B00566A31 /* HotelScreenView.swift */; };
 		FF2519232AB0B17100566A31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF2519252AB0B17100566A31 /* Localizable.strings */; };
 		FF2519282AB0B9A500566A31 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FF2519272AB0B9A500566A31 /* SDWebImageSwiftUI */; };
 		FF25192A2AB0B9D800566A31 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2519292AB0B9D800566A31 /* ImageCarouselView.swift */; };
+		FF25192E2AB0DA2100566A31 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF25192D2AB0DA2100566A31 /* SF-Pro-Display-Regular.otf */; };
+		FF2519312AB0DB2700566A31 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2519302AB0DB2700566A31 /* Fonts.swift */; };
+		FF2519342AB0DBF900566A31 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2519332AB0DBF900566A31 /* RatingView.swift */; };
+		FF2519382AB0DD2A00566A31 /* Color+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2519372AB0DD2A00566A31 /* Color+ext.swift */; };
+		FF25193A2AB0FB2200566A31 /* AssetsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2519392AB0FB2200566A31 /* AssetsHelper.swift */; };
+		FF2519442AB10A7A00566A31 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF2519432AB10A7A00566A31 /* SF-Pro-Display-Semibold.otf */; };
+		FF2519462AB10A9200566A31 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF2519452AB10A9200566A31 /* SF-Pro-Display-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF2519082AB0AE3D00566A31 /* BookingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF25190B2AB0AE3D00566A31 /* BookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingApp.swift; sourceTree = "<group>"; };
-		FF25190D2AB0AE3D00566A31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FF25190F2AB0AE3E00566A31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF2519122AB0AE3E00566A31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF25191B2AB0AF9B00566A31 /* HotelScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelScreenView.swift; sourceTree = "<group>"; };
 		FF2519242AB0B17100566A31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF2519292AB0B9D800566A31 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
+		FF25192D2AB0DA2100566A31 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "BookingApp/Resources/Fonts/SF-Pro-Display-Regular.otf"; sourceTree = SOURCE_ROOT; };
+		FF25192F2AB0DA9D00566A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FF2519302AB0DB2700566A31 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		FF2519332AB0DBF900566A31 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		FF2519372AB0DD2A00566A31 /* Color+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+ext.swift"; sourceTree = "<group>"; };
+		FF2519392AB0FB2200566A31 /* AssetsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsHelper.swift; sourceTree = "<group>"; };
+		FF2519432AB10A7A00566A31 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		FF2519452AB10A9200566A31 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +72,14 @@
 		FF25190A2AB0AE3D00566A31 /* BookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				FF25192F2AB0DA9D00566A31 /* Info.plist */,
 				FF25190B2AB0AE3D00566A31 /* BookingApp.swift */,
-				FF25190D2AB0AE3D00566A31 /* ContentView.swift */,
 				FF2519202AB0B00E00566A31 /* Coordinator */,
 				FF2519192AB0AF4700566A31 /* Components */,
 				FF25191F2AB0B00000566A31 /* Models */,
 				FF25191A2AB0AF6C00566A31 /* HotelScreen */,
 				FF25191D2AB0AFA400566A31 /* Resources */,
+				FF2519352AB0DD0200566A31 /* Utils+Helpers */,
 				FF2519112AB0AE3E00566A31 /* Preview Content */,
 			);
 			path = BookingApp;
@@ -91,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				FF25191B2AB0AF9B00566A31 /* HotelScreenView.swift */,
+				FF2519322AB0DB9700566A31 /* Subviews */,
 			);
 			path = HotelScreen;
 			sourceTree = "<group>";
@@ -98,7 +113,8 @@
 		FF25191D2AB0AFA400566A31 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FF2519252AB0B17100566A31 /* Localizable.strings */,
+				FF25192C2AB0D9A400566A31 /* Fonts */,
+				FF25192B2AB0D52600566A31 /* LocalisedStrings */,
 				FF25191E2AB0AFB200566A31 /* Assets */,
 			);
 			path = Resources;
@@ -107,6 +123,7 @@
 		FF25191E2AB0AFB200566A31 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FF2519392AB0FB2200566A31 /* AssetsHelper.swift */,
 				FF25190F2AB0AE3E00566A31 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -124,6 +141,49 @@
 			children = (
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FF25192B2AB0D52600566A31 /* LocalisedStrings */ = {
+			isa = PBXGroup;
+			children = (
+				FF2519252AB0B17100566A31 /* Localizable.strings */,
+			);
+			path = LocalisedStrings;
+			sourceTree = "<group>";
+		};
+		FF25192C2AB0D9A400566A31 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FF2519302AB0DB2700566A31 /* Fonts.swift */,
+				FF2519452AB10A9200566A31 /* SF-Pro-Display-Medium.otf */,
+				FF2519432AB10A7A00566A31 /* SF-Pro-Display-Semibold.otf */,
+				FF25192D2AB0DA2100566A31 /* SF-Pro-Display-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FF2519322AB0DB9700566A31 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				FF2519332AB0DBF900566A31 /* RatingView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		FF2519352AB0DD0200566A31 /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FF2519362AB0DD1400566A31 /* Extensions */,
+			);
+			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
+		FF2519362AB0DD1400566A31 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF2519372AB0DD2A00566A31 /* Color+ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +250,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2519462AB10A9200566A31 /* SF-Pro-Display-Medium.otf in Resources */,
 				FF2519132AB0AE3E00566A31 /* Preview Assets.xcassets in Resources */,
 				FF2519232AB0B17100566A31 /* Localizable.strings in Resources */,
+				FF2519442AB10A7A00566A31 /* SF-Pro-Display-Semibold.otf in Resources */,
+				FF25192E2AB0DA2100566A31 /* SF-Pro-Display-Regular.otf in Resources */,
 				FF2519102AB0AE3E00566A31 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,9 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF25190E2AB0AE3D00566A31 /* ContentView.swift in Sources */,
+				FF25193A2AB0FB2200566A31 /* AssetsHelper.swift in Sources */,
+				FF2519312AB0DB2700566A31 /* Fonts.swift in Sources */,
 				FF25190C2AB0AE3D00566A31 /* BookingApp.swift in Sources */,
+				FF2519342AB0DBF900566A31 /* RatingView.swift in Sources */,
 				FF25192A2AB0B9D800566A31 /* ImageCarouselView.swift in Sources */,
+				FF2519382AB0DD2A00566A31 /* Color+ext.swift in Sources */,
 				FF25191C2AB0AF9B00566A31 /* HotelScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -328,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -349,12 +415,13 @@
 				DEVELOPMENT_TEAM = T574RGJCUB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,12 +446,13 @@
 				DEVELOPMENT_TEAM = T574RGJCUB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

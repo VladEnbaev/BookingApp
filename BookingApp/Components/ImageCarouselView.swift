@@ -18,6 +18,10 @@ struct ImageCarouselView: View {
             ForEach(urls.indices, id: \.self) { id in
                 WebImage(url: urls[id])
                     .resizable()
+                    .placeholder(content: {
+                        Rectangle()
+                            .fill(.gray)
+                    })
                     .indicator(.activity(style: .medium))
                     .clipped()
                     .tag(id)

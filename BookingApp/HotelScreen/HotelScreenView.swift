@@ -9,9 +9,31 @@ import SwiftUI
 
 struct HotelScreenView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            adressButton
+            hotelNameLabel
+        }
+    }
+    
+    var adressButton: some View {
+        Button {
+            //
+        } label: {
+            Text("Some")
+                .font(.custom(Fonts.semibold, size: 14))
+                .foregroundColor(.accentColor)
+        }
+    }
+    
+    var hotelNameLabel: some View {
+        HStack {
+            Text("some")
+                .font(.custom(Fonts.regular, size: 22))
+            Spacer()
+        }
     }
 }
+
 
 struct HotelScreenView_Previews: PreviewProvider {
     static var previews: some View {
