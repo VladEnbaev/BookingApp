@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Color {
     static var accentBackground = Color("accentBackground")
-    static var accentColor = Color("accentColor")
+    static var primaryAccentColor = Color("primaryAccentColor")
     static var backgroundScreen = Color("backgroundScreen")
     static var backgroundSurface = Color("backgroundSurface")
     static var contentSecondary = Color("contentSecondary")

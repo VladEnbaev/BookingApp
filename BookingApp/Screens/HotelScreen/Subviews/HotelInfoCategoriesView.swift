@@ -26,22 +26,22 @@ enum HotelInfoCategories: CaseIterable {
     var title: LocalizedStringKey {
         switch self {
         case .сonveniences:
-            return "Удобства"
+            return "hotel_section_conviniences"
         case .included:
-            return "Что включено"
+            return "hotel_section_included"
         case .notIncluded:
-            return "Что не включено"
+            return "hotel_section_not_included"
         }
     }
     
     var subtitle: LocalizedStringKey {
         switch self {
         case .сonveniences:
-            return "Самое необходимое"
+            return "hotel_section_conviniences_subtitle"
         case .included:
-            return "Самое необходимое"
+            return "hotel_section_conviniences_subtitle"
         case .notIncluded:
-            return "Самое необходимое"
+            return "hotel_section_conviniences_subtitle"
         }
     }
 }

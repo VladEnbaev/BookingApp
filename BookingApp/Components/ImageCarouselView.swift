@@ -15,21 +15,29 @@ struct ImageCarouselView: View {
     
     var body: some View {
         TabView {
-            ForEach(urls.indices, id: \.self) { id in
-                WebImage(url: urls[id])
-                    .resizable()
-                    .placeholder(content: {
-                        Rectangle()
-                            .fill(.gray)
-                    })
-                    .indicator(.activity(style: .medium))
-                    .clipped()
-                    .tag(id)
+            if !urls.isEmpty {
+                ForEach(urls.indices, id: \.self) { id in
+                    WebImage(url: urls[id])
+                        .resizable()
+                        .placeholder(content: {
+                            placeholder
+                        })
+                        .indicator(.activity(style: .medium))
+                        .clipped()
+                        .tag(id)
+                }
+            } else {
+                placeholder
             }
+            
         }
         .frame(height: 257)
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .tabViewStyle(.page(indexDisplayMode: .always))
+    }
+    
+    var placeholder: some View {
+        Image(Assets.Images.placeholder)
     }
 }
 

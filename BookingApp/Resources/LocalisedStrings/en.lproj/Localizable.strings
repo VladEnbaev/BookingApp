@@ -13,3 +13,8 @@
 "hotel_about_label" = "Об отеле";
 "hotel_to_room_button" = "К выбору номера";
 "hotel_price_from" = "От ";
+
+"hotel_section_conviniences" = "Удобства";
+"hotel_section_included" = "Что включено";
+"hotel_section_not_included" = "Что не включено";
+"hotel_section_conviniences_subtitle" = "Самое необходимое";

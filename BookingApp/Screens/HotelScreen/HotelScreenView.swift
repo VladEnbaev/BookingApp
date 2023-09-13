@@ -12,16 +12,27 @@ struct HotelScreenView: View {
     @StateObject var viewModel: HotelScreenViewModel
     
     var body: some View {
-        ScrollView {
-            HotelMainInfoView(viewModel: viewModel)
-                .overlay {
-                    activityIndicator
-                }
-            AboutHotelView(viewModel: viewModel)
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 8) {
+                HotelMainInfoView(viewModel: viewModel)
+                    .overlay {
+                        activityIndicator
+                    }
+                AboutHotelView(viewModel: viewModel)
+            }
+            .padding(.top, 57)
         }
         .background(Color.backgroundScreen)
         .onAppear {
             viewModel.getHotel()
+        }
+        .overlay(alignment: .top) {
+            SystemNavigationBar(title: "hotel_navigation_title", backButtonHidden: true)
+        }
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                AccentButton(text: "hotel_to_room_button", action: {} )
+            }
         }
         
     }
@@ -39,6 +50,8 @@ struct HotelScreenView: View {
 
 struct HotelScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        HotelScreenView(viewModel: .init(bookingService: BookingService()))
+        NavigationView {
+            HotelScreenView(viewModel: .init(bookingService: BookingService()))
+        }
     }
 }
