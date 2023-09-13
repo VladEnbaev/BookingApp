@@ -28,6 +28,11 @@
 		FFBC5C582AB1A0F900FDA086 /* BookingEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC5C572AB1A0F900FDA086 /* BookingEndpoints.swift */; };
 		FFBC5C5A2AB1A28700FDA086 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC5C592AB1A28700FDA086 /* NetworkService.swift */; };
 		FFBC5C5E2AB1A39500FDA086 /* BookingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC5C5D2AB1A39500FDA086 /* BookingService.swift */; };
+		FFBC5C612AB1CEA400FDA086 /* String+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC5C602AB1CEA400FDA086 /* String+ext.swift */; };
+		FFBC5C632AB1D14E00FDA086 /* AboutHotelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC5C622AB1D14E00FDA086 /* AboutHotelView.swift */; };
+		FFBC5C652AB1D16800FDA086 /* HotelMainInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC5C642AB1D16800FDA086 /* HotelMainInfoView.swift */; };
+		FFBC5C672AB1D23C00FDA086 /* PeculiaritiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC5C662AB1D23C00FDA086 /* PeculiaritiesView.swift */; };
+		FFBC5C7B2AB1F88200FDA086 /* HotelInfoCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC5C7A2AB1F88200FDA086 /* HotelInfoCategoriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,12 @@
 		FFBC5C572AB1A0F900FDA086 /* BookingEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingEndpoints.swift; sourceTree = "<group>"; };
 		FFBC5C592AB1A28700FDA086 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FFBC5C5D2AB1A39500FDA086 /* BookingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingService.swift; sourceTree = "<group>"; };
+		FFBC5C5F2AB1CE5E00FDA086 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FFBC5C602AB1CEA400FDA086 /* String+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ext.swift"; sourceTree = "<group>"; };
+		FFBC5C622AB1D14E00FDA086 /* AboutHotelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHotelView.swift; sourceTree = "<group>"; };
+		FFBC5C642AB1D16800FDA086 /* HotelMainInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelMainInfoView.swift; sourceTree = "<group>"; };
+		FFBC5C662AB1D23C00FDA086 /* PeculiaritiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeculiaritiesView.swift; sourceTree = "<group>"; };
+		FFBC5C7A2AB1F88200FDA086 /* HotelInfoCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelInfoCategoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +193,11 @@
 		FF2519322AB0DB9700566A31 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				FFBC5C642AB1D16800FDA086 /* HotelMainInfoView.swift */,
+				FFBC5C622AB1D14E00FDA086 /* AboutHotelView.swift */,
 				FF2519332AB0DBF900566A31 /* RatingView.swift */,
+				FFBC5C662AB1D23C00FDA086 /* PeculiaritiesView.swift */,
+				FFBC5C7A2AB1F88200FDA086 /* HotelInfoCategoriesView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -200,6 +215,7 @@
 			children = (
 				FF2519372AB0DD2A00566A31 /* Color+ext.swift */,
 				FFBC5C4C2AB111FE00FDA086 /* View+ext.swift */,
+				FFBC5C602AB1CEA400FDA086 /* String+ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +292,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = FF2518FF2AB0AE3D00566A31;
 			packageReferences = (
@@ -311,16 +328,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBC5C672AB1D23C00FDA086 /* PeculiaritiesView.swift in Sources */,
 				FFBC5C542AB1A01900FDA086 /* Hotel.swift in Sources */,
+				FFBC5C632AB1D14E00FDA086 /* AboutHotelView.swift in Sources */,
 				FFBC5C4D2AB111FE00FDA086 /* View+ext.swift in Sources */,
 				FF25193A2AB0FB2200566A31 /* AssetsHelper.swift in Sources */,
 				FFBC5C5E2AB1A39500FDA086 /* BookingService.swift in Sources */,
 				FF2519312AB0DB2700566A31 /* Fonts.swift in Sources */,
 				FF25190C2AB0AE3D00566A31 /* BookingApp.swift in Sources */,
 				FFBC5C4F2AB19EE900FDA086 /* HotelScreenViewModel.swift in Sources */,
+				FFBC5C7B2AB1F88200FDA086 /* HotelInfoCategoriesView.swift in Sources */,
+				FFBC5C652AB1D16800FDA086 /* HotelMainInfoView.swift in Sources */,
 				FF2519342AB0DBF900566A31 /* RatingView.swift in Sources */,
 				FF25192A2AB0B9D800566A31 /* ImageCarouselView.swift in Sources */,
 				FF2519382AB0DD2A00566A31 /* Color+ext.swift in Sources */,
+				FFBC5C612AB1CEA400FDA086 /* String+ext.swift in Sources */,
 				FF25191C2AB0AF9B00566A31 /* HotelScreenView.swift in Sources */,
 				FFBC5C582AB1A0F900FDA086 /* BookingEndpoints.swift in Sources */,
 				FFBC5C5A2AB1A28700FDA086 /* NetworkService.swift in Sources */,
@@ -335,6 +357,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FF2519242AB0B17100566A31 /* en */,
+				FFBC5C5F2AB1CE5E00FDA086 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -346,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -406,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

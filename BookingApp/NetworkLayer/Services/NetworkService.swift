@@ -39,7 +39,7 @@ class NetworkService: NetworkServiceProtocol {
         responseModel: T.Type
     ) async throws -> T {
 
-        var request = URLComponents(string: endpoint.url)!
+        let request = URLComponents(string: endpoint.url)!
 
         guard let url = request.url else { throw RequestError.invalidURL }
 
