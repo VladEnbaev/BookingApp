@@ -21,6 +21,8 @@
 		FF25193A2AB0FB2200566A31 /* AssetsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2519392AB0FB2200566A31 /* AssetsHelper.swift */; };
 		FF2519442AB10A7A00566A31 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF2519432AB10A7A00566A31 /* SF-Pro-Display-Semibold.otf */; };
 		FF2519462AB10A9200566A31 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF2519452AB10A9200566A31 /* SF-Pro-Display-Medium.otf */; };
+		FFBC5C4D2AB111FE00FDA086 /* View+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC5C4C2AB111FE00FDA086 /* View+ext.swift */; };
+		FFBC5C4F2AB19EE900FDA086 /* HotelScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC5C4E2AB19EE900FDA086 /* HotelScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		FF2519392AB0FB2200566A31 /* AssetsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsHelper.swift; sourceTree = "<group>"; };
 		FF2519432AB10A7A00566A31 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		FF2519452AB10A9200566A31 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		FFBC5C4C2AB111FE00FDA086 /* View+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ext.swift"; sourceTree = "<group>"; };
+		FFBC5C4E2AB19EE900FDA086 /* HotelScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FF25191B2AB0AF9B00566A31 /* HotelScreenView.swift */,
+				FFBC5C4E2AB19EE900FDA086 /* HotelScreenViewModel.swift */,
 				FF2519322AB0DB9700566A31 /* Subviews */,
 			);
 			path = HotelScreen;
@@ -182,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				FF2519372AB0DD2A00566A31 /* Color+ext.swift */,
+				FFBC5C4C2AB111FE00FDA086 /* View+ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBC5C4D2AB111FE00FDA086 /* View+ext.swift in Sources */,
 				FF25193A2AB0FB2200566A31 /* AssetsHelper.swift in Sources */,
 				FF2519312AB0DB2700566A31 /* Fonts.swift in Sources */,
 				FF25190C2AB0AE3D00566A31 /* BookingApp.swift in Sources */,
+				FFBC5C4F2AB19EE900FDA086 /* HotelScreenViewModel.swift in Sources */,
 				FF2519342AB0DBF900566A31 /* RatingView.swift in Sources */,
 				FF25192A2AB0B9D800566A31 /* ImageCarouselView.swift in Sources */,
 				FF2519382AB0DD2A00566A31 /* Color+ext.swift in Sources */,

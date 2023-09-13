@@ -30,19 +30,18 @@ struct ImageCarouselView: View {
         .frame(height: 257)
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .tabViewStyle(.page(indexDisplayMode: .always))
-        .padding(.horizontal, 16)
     }
 }
 
 struct ImageCarouselView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ImageCarouselView(urls:  previewStrings.map({URL(string: $0)!}))
+        ImageCarouselView(urls:  previewImageURls)
     }
 }
 
-fileprivate let previewStrings = [
+let previewImageURls = [
     "https://deluxe.voyage/useruploads/articles/The_Makadi_Spa_Hotel_02.jpg",
     "https://deluxe.voyage/useruploads/articles/article_1eb0a64d00.jpg",
     "https://www.atorus.ru/sites/default/files/upload/image/News/56149/Club_Priv%C3%A9_by_Belek_Club_House.jpg"
-]
+].map({URL(string: $0)!})
