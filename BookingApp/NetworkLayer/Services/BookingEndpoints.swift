@@ -24,7 +24,7 @@ enum BookingEdpoints: Equatable {
         case .hotel:
             return "/35e0d18e-2521-4f1b-a575-f0fe366f66e3"
         case .rooms:
-            return "f9a38183-6f95-43aa-853a-9c83cbb05ecd"
+            return "/f9a38183-6f95-43aa-853a-9c83cbb05ecd"
         }
     }
     

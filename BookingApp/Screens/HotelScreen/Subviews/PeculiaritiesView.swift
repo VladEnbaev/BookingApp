@@ -22,6 +22,7 @@ struct PeculiaritiesView: View {
             }
         }
         .frame(height: totalHeight)
+        .padding(.leading, -4)
     }
 
     private func generateContent(in g: GeometryProxy) -> some View {

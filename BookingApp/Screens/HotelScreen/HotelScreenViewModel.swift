@@ -9,15 +9,15 @@ import Foundation
 
 @MainActor
 final class HotelScreenViewModel: ObservableObject {
-    @Published private(set) var hotelName: String = "Steigenberger Makadi"
-    @Published private(set) var hotelAddress: String = "Madinat Makadi, Safaga Road, Makadi Bay, Египет"
-    @Published private(set) var rating: String = "5 Super"
-    @Published private(set) var price: String = "30 000"
-    @Published private(set) var priceDescription: String = "за тур с перелетом"
-    @Published private(set) var imageUrls: [URL] = []
+    @Published private(set) var hotelName: String = "" //"Steigenberger Makadi"
+    @Published private(set) var hotelAddress: String = "" //"Madinat Makadi, Safaga Road, Makadi Bay, Египет"
+    @Published private(set) var rating: String = "" //"5 Super"
+    @Published private(set) var price: String = "" //"30 000"
+    @Published private(set) var priceDescription: String = "" //"за тур с перелетом"
+    @Published private(set) var imageUrls: [String] = []
     
-    @Published private(set) var hotelDescription: String = "Отель VIP-класса с собственными гольф полями. Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет!"
-    @Published private(set) var hotelPeculiarities: [String] = ["3-я линия", "Платный Wi-Fi в фойе", "30 км до аэропорта", "1 км до пляжа", "40 км до аэропорта"]
+    @Published private(set) var hotelDescription: String = "" //"Отель VIP-класса с собственными гольф полями. Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет!"
+    @Published private(set) var hotelPeculiarities: [String] = [] //["3-я линия", "Платный Wi-Fi в фойе", "30 км до аэропорта", "1 км до пляжа", "40 км до аэропорта"]
     
     @Published private(set) var isIndicatorOn: Bool = false
     
@@ -31,17 +31,17 @@ final class HotelScreenViewModel: ObservableObject {
         isIndicatorOn = true
         Task {
             do {
-                let hotels = try await bookingService.getHotels()
-                configureHotel(hotel: hotels[0])
+                let hotel = try await bookingService.getHotels()
+                configureHotel(hotel: hotel)
                 isIndicatorOn = false
             } catch {
-                print(error.localizedDescription)
+                print(error)
             }
         }
     }
     
     private func configureHotel(hotel: Hotel) {
-        configureImagesURLs(urlStrings: hotel.imageUrls)
+        imageUrls = hotel.imageUrls
         rating = "\(hotel.rating) \(hotel.ratingName)"
         hotelName = hotel.name
         hotelAddress = hotel.adress
@@ -49,10 +49,6 @@ final class HotelScreenViewModel: ObservableObject {
         priceDescription = hotel.priceDescription
         hotelPeculiarities = hotel.hotelDescription.peculiarities
         hotelDescription = hotel.hotelDescription.description
-    }
-    
-    private func configureImagesURLs(urlStrings: [String]) {
-        imageUrls = urlStrings.map({URL(string: $0)!})
     }
     
     private func configurePrice(price: Double) {
