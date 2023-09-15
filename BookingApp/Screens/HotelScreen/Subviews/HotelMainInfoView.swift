@@ -14,7 +14,7 @@ struct HotelMainInfoView: View {
     var body: some View {
         VStack(spacing: 16) {
             ImageCarouselView(urls: viewModel.imageUrls)
-            hotelMainInfoView
+            hotelNameView
             hotelPriceView
         }
         .edgesIgnoringSafeArea(.top)
@@ -23,25 +23,12 @@ struct HotelMainInfoView: View {
         .cornerRadius(12)
     }
     
-    var hotelMainInfoView: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            RatingView(rate: viewModel.rating)
-            hotelNameLabel
-            locationButton
-        }
-        .aligment(.leading)
-    }
-    
-    var hotelNameLabel: some View {
-        Text(viewModel.hotelName)
-            .font(.custom(Fonts.medium, size: 22))
-    }
-    
-    var locationButton: some View {
-        Button(action: { }) {
-            Text(viewModel.hotelAddress)
-                .font(.custom(Fonts.medium, size: 14))
-        }
+    var hotelNameView: some View {
+        HotelNameView(
+            rating: viewModel.rating,
+            name: viewModel.hotelName,
+            address: viewModel.hotelAddress
+        )
     }
     
     var hotelPriceView: some View {
@@ -58,6 +45,33 @@ struct HotelMainInfoView: View {
             }
             Spacer()
         }.frame(height: 28)
+    }
+}
+
+struct HotelNameView: View {
+    var rating: String
+    var name: String
+    var address: String
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            RatingView(rate: rating)
+            hotelNameLabel
+            locationButton
+        }
+        .aligment(.leading)
+    }
+    
+    var hotelNameLabel: some View {
+        Text(name)
+            .font(.custom(Fonts.medium, size: 22))
+    }
+    
+    var locationButton: some View {
+        Button(action: { }) {
+            Text(address)
+                .font(.custom(Fonts.medium, size: 14))
+        }
     }
 }
 

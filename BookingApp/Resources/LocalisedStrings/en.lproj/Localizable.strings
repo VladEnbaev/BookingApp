@@ -21,3 +21,22 @@
 //MARK: - Rooms Screen
 "rooms_choose_room_button" = "Выбрать номер";
 "rooms_detail_button" = "Подробнее о номере";
+
+//MARK: - Booking Screen
+"booking_navigation_title" = "Бронирование";
+
+"booking_departure_from" = "Вылет из";
+"booking_country_city" = "Страна, город";
+"booking_dates" = "Даты";
+"booking_nights" = "Кол-во ночей";
+"booking_hotel" = "Отель";
+"booking_room" = "Номер";
+"booking_food" = "Питание";
+
+"booking_buyer_info_title" = "Информация о покупателе";
+"booking_phone_number" = "Номер телефона";
+"booking_email" = "Почта";
+"booking_terms_of_use" = "Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту";
+
+
+

@@ -29,3 +29,12 @@ extension View {
         }
     }
 }
+
+extension View {
+    func systemRowModifier() -> some View {
+        self
+            .padding(16)
+            .background(Color.backgroundSurface)
+            .cornerRadius(12)
+    }
+}

@@ -13,6 +13,7 @@ import Foundation
 protocol BookingServiceProtocol {
     func getHotels() async throws -> Hotel
     func getRooms() async throws -> [Room]
+    func getBookingInfo() async throws -> BookingInfo
 }
 
 final class BookingService: BookingServiceProtocol {
@@ -30,5 +31,9 @@ final class BookingService: BookingServiceProtocol {
     func getRooms() async throws -> [Room] {
         let response = try await networkService.sendRequest(endpoint: .rooms, responseModel: RoomsResponse.self)
         return response.rooms
+    }
+    
+    func getBookingInfo() async throws -> BookingInfo {
+        return try await networkService.sendRequest(endpoint: .bookingInfo, responseModel: BookingInfo.self)
     }
 }
