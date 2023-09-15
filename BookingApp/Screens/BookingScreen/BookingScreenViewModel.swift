@@ -20,9 +20,12 @@ final class BookingScreenViewModel: IdentifiableObject {
     @Published private(set) var numberOfNights: String = ""
     @Published private(set) var room: String = "Люкс номер с видом на море"
     @Published private(set) var nutrition: String = ""
+
     @Published private(set) var tourPrice: String = ""
     @Published private(set) var fuelCharge: String = ""
     @Published private(set) var serviceCharge: String = ""
+    @Published private(set) var totalPrice: String = ""
+    
     
     var bookingService: BookingServiceProtocol
     var navigationSubject: PassthroughSubject<AppCoordinator.FlowType, Never>
@@ -58,7 +61,7 @@ final class BookingScreenViewModel: IdentifiableObject {
         fuelCharge = String(bookingInfo.fuelCharge)
         serviceCharge = String(bookingInfo.serviceCharge)
         
-        configurePrice(price: bookingInfo.tourPrice)
+        configurePrices(bookingInfo: bookingInfo)
         configureTourDates(start: bookingInfo.tourDateStart, end: bookingInfo.tourDateStop)
     }
     
@@ -66,7 +69,12 @@ final class BookingScreenViewModel: IdentifiableObject {
         tourDates = "\(start) - \(end)"
     }
     
-    private func configurePrice(price: Double) {
-        tourPrice = CurrencyFormatter.format(price)
+    private func configurePrices(bookingInfo: BookingInfo) {
+        let totalPrice = bookingInfo.fuelCharge + bookingInfo.serviceCharge + bookingInfo.tourPrice
+        
+        self.totalPrice = CurrencyFormatter.format(totalPrice)
+        self.fuelCharge = CurrencyFormatter.format(bookingInfo.fuelCharge)
+        self.serviceCharge = CurrencyFormatter.format(bookingInfo.serviceCharge)
+        self.tourPrice = CurrencyFormatter.format(bookingInfo.tourPrice)
     }
 }

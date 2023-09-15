@@ -18,11 +18,11 @@ struct AccentPlusButton: View {
     }
     
     var label: some View {
-        Image(systemName: "plus")
+        Image(Assets.Icons.plus)
             .frame(width: 24, height: 24)
             .font(.headline)
             .foregroundColor(.white)
-            .padding(2)
+            .padding(4)
             .background(.blue)
             .cornerRadius(6)
     }

@@ -12,14 +12,32 @@ struct BookingScreenView: View {
     @ObservedObject var viewModel: BookingScreenViewModel
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 8) {
-                hotelNameView
-                BookingInfoView(viewModel: viewModel)
-                BuyerInfoView()
+        NavigationView {
+            ScrollView {
+                VStack(spacing: 8) {
+                    hotelNameView
+                    BookingInfoView(viewModel: viewModel)
+                    BuyerInfoView()
+                    BookingTouristView(label: "Первый турист")
+                    BookingTouristView(label: "Второй турист")
+                    AddTouristView(action: { })
+                    PriceView(viewModel: viewModel)
+                }
+                .padding(.top, 55)
+                .padding(.bottom, 8)
+            }
+            .background(Color.backgroundScreen)
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    AccentButton(text: "hotel_to_room_button") {
+                        //action
+                    }
+                }
             }
         }
-        .background(Color.backgroundScreen)
+        .overlay(alignment: .top) {
+            SystemNavigationBar(title: "booking_navigation_title")
+        }
         .onAppear {
             viewModel.getBookingInfo()
         }

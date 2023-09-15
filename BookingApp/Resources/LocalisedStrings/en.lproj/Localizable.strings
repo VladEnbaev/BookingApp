@@ -38,5 +38,20 @@
 "booking_email" = "Почта";
 "booking_terms_of_use" = "Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту";
 
+"booking_tourist_of_number %@" = "%@ турист";
 
+"booking_tourist_name" = "Имя";
+"booking_tourist_surname" = "Фамилия";
+"booking_tourist_birthday" = "Дата рождения";
+"booking_tourist_citizenship" = "Гражданство";
+"booking_tourist_passport" = "Номер загранпаспорта";
+"booking_tourist_passport_date" = "Срок действия загранпаспорта";
 
+"booking_add_torist" = "Добавить туриста";
+
+"booking_price_tour" = "Тур";
+"booking_price_fuel_charge" = "Топливный сбор";
+"booking_price_service_charge" = "Сервисный сбор";
+"booking_price_total" = "К оплате";
+
+"booking_pay_button" = "Оплатить";

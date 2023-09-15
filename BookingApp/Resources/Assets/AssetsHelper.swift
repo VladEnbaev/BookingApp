@@ -15,6 +15,8 @@ enum Assets {
         static var rightArrow = "rightArrow"
         static var star = "star"
         static var tickSquare = "tickSquare"
+        static var chevronDown = "chevronDown"
+        static var plus = "plus"
     }
     enum Images {
         static var placeholder = "placeholder"
