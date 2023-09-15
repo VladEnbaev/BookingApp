@@ -6,16 +6,22 @@
 //
 
 import Foundation
+import Combine
 
 
 @MainActor
-final class RoomsScreenViewModel: ObservableObject {
+final class RoomsScreenViewModel: IdentifiableObject {
     @Published private(set) var rooms = [Room]()
     
     var bookingService: BookingServiceProtocol
+    var navigationSubject: PassthroughSubject<AppCoordinator.FlowType, Never>
     
-    init(bookingService: BookingServiceProtocol) {
+    init(
+        bookingService: BookingServiceProtocol,
+        navigationSubject: PassthroughSubject<AppCoordinator.FlowType, Never>
+    ) {
         self.bookingService = bookingService
+        self.navigationSubject = navigationSubject
     }
     
     func getRooms() {
@@ -35,6 +41,6 @@ final class RoomsScreenViewModel: ObservableObject {
 
 extension RoomsScreenViewModel: RoomCellParentViewModel {
     func chooseButtonTapped() {
-        print("GO GO GO")
+        //navigationSubject.send(.)
     }
 }

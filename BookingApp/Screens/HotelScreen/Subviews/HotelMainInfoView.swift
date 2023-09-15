@@ -63,6 +63,11 @@ struct HotelMainInfoView: View {
 
 struct HotelMainInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        HotelMainInfoView(viewModel: .init(bookingService: BookingService()))
+        HotelMainInfoView(
+            viewModel: .init(
+                bookingService: BookingService(),
+                navigationSubject: .init()
+            )
+        )
     }
 }

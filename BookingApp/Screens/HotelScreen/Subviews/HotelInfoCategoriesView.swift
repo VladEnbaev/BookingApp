@@ -53,7 +53,7 @@ struct HotelInfoCategoriesView: View {
         VStack {
             ForEach(HotelInfoCategories.allCases, id: \.hashValue) { category in
                 Button {
-                    //
+                    //action
                 } label: {
                     categoryView(category)
                 }

@@ -42,6 +42,7 @@ struct AboutHotelView: View {
 
 struct AboutHotelView_Previews: PreviewProvider {
     static var previews: some View {
-        AboutHotelView(viewModel: .init(bookingService: BookingService()))
+        AboutHotelView(viewModel: .init(bookingService: BookingService(),
+                                        navigationSubject: .init()))
     }
 }

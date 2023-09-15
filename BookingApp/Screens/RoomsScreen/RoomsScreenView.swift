@@ -34,6 +34,7 @@ struct RoomsScreenView: View {
 
 struct RoomsScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomsScreenView(viewModel: .init(bookingService: BookingService()))
+        RoomsScreenView(viewModel: .init(bookingService: BookingService(),
+                                         navigationSubject: .init()))
     }
 }

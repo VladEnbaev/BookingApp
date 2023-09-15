@@ -10,12 +10,15 @@ import SwiftUI
 struct SystemNavigationBar: View {
     var title: LocalizedStringKey
     var backButtonHidden: Bool
-    var backButtonAction: () -> Void
     
-    init(title: LocalizedStringKey, backButtonHidden: Bool = false, backButtonAction: @escaping () -> Void = {}) {
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
+    init(
+        title: LocalizedStringKey,
+        backButtonHidden: Bool = false
+    ) {
         self.title = title
         self.backButtonHidden = backButtonHidden
-        self.backButtonAction = backButtonAction
     }
     
     var body: some View {
@@ -36,7 +39,7 @@ struct SystemNavigationBar: View {
     }
     
     var backButton: some View {
-        Button(action: backButtonAction) {
+        Button(action: { mode.wrappedValue.dismiss() }) {
             Image(backButtonHidden ? "" : Assets.Icons.leftArrow)
                 .resizable()
                 .frame(width: 32, height: 32, alignment: .center)

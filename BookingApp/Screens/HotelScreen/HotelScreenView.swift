@@ -31,7 +31,9 @@ struct HotelScreenView: View {
         }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-                AccentButton(text: "hotel_to_room_button", action: {} )
+                AccentButton(text: "hotel_to_room_button") {
+                    viewModel.toRoomButtonPressed()
+                }
             }
         }
         
@@ -51,7 +53,7 @@ struct HotelScreenView: View {
 struct HotelScreenView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            HotelScreenView(viewModel: .init(bookingService: BookingService()))
+            HotelScreenView(viewModel: .init(bookingService: BookingService(), navigationSubject: .init()))
         }
     }
 }

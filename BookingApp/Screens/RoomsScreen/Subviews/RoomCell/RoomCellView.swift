@@ -67,8 +67,15 @@ struct RoomCellView: View {
 struct RoomCellView_Previews: PreviewProvider {
     static var previews: some View {
         RoomCellView(
-            viewModel: .init(room: Room.testRoom,
-                             parentViewModel:
-                                RoomsScreenViewModel(bookingService: BookingService())))
+            viewModel:
+                RoomCellViewModel(
+                    room: Room.testRoom,
+                    parentViewModel:
+                        RoomsScreenViewModel(
+                            bookingService: BookingService(),
+                            navigationSubject: .init()
+                        )
+                )
+        )
     }
 }

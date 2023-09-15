@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import Combine
 
 @MainActor
-final class HotelScreenViewModel: ObservableObject {
+final class HotelScreenViewModel: IdentifiableObject {
     @Published private(set) var hotelName: String = "" //"Steigenberger Makadi"
     @Published private(set) var hotelAddress: String = "" //"Madinat Makadi, Safaga Road, Makadi Bay, Египет"
     @Published private(set) var rating: String = "" //"5 Super"
@@ -22,9 +23,14 @@ final class HotelScreenViewModel: ObservableObject {
     @Published private(set) var isIndicatorOn: Bool = false
     
     var bookingService: BookingServiceProtocol
+    var navigationSubject: PassthroughSubject<AppCoordinator.FlowType, Never>
     
-    init(bookingService: BookingServiceProtocol) {
+    init(
+        bookingService: BookingServiceProtocol,
+        navigationSubject: PassthroughSubject<AppCoordinator.FlowType, Never>
+    ) {
         self.bookingService = bookingService
+        self.navigationSubject = navigationSubject
     }
     
     func getHotel() {
@@ -53,6 +59,10 @@ final class HotelScreenViewModel: ObservableObject {
     
     private func configurePrice(price: Double) {
         self.price = CurrencyFormatter.format(price)
+    }
+    
+    func toRoomButtonPressed() {
+        navigationSubject.send(.toRoomsScreen)
     }
 }
 
