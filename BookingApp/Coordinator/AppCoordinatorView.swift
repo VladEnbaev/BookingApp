@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct AppCoordinatorView: View {
-    @ObservedObject var coordinator = AppCoordinator()
+    @StateObject var coordinator = AppCoordinator()
     
     var body: some View {
         NavigationView {
             HotelScreenView(viewModel: coordinator.hotelScreenViewModel!)
                 .navigation(model: $coordinator.roomsScreenViewModel) { viewModel in
                     RoomsScreenView(viewModel: viewModel).navigationBarHidden(true)
+                        .navigation(model: $coordinator.bookingScreenViewModel) { viewModel in
+                            BookingScreenView(viewModel: viewModel).navigationBarHidden(true)
+                                .navigation(model: $coordinator.paidScreenViewModel) { viewModel in
+                                    PaidScreenView(viewModel: viewModel).navigationBarHidden(true)
+                                }
+                        }
                 }
         }
         .navigationViewStyle(.stack)

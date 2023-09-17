@@ -20,7 +20,8 @@ final class AppCoordinator: IdentifiableObject {
     // MARK: - Outputs
     @Published var hotelScreenViewModel: HotelScreenViewModel?
     @Published var roomsScreenViewModel: RoomsScreenViewModel?
-    //@Published var bookingScreenViewModel:
+    @Published var bookingScreenViewModel: BookingScreenViewModel?
+    @Published var paidScreenViewModel: PaidScreenViewModel?
     
     // MARK: - Properties
     private var cancellables: Set<AnyCancellable> = []
@@ -28,8 +29,10 @@ final class AppCoordinator: IdentifiableObject {
     
     // MARK: Init/Deinit
     init() {
-        hotelScreenViewModel = HotelScreenViewModel(bookingService: bookingService,
-                                                    navigationSubject: navigationSubject)
+        hotelScreenViewModel = HotelScreenViewModel(
+            bookingService: bookingService,
+            navigationSubject: navigationSubject
+        )
         bindPublishers()
     }
     
@@ -43,6 +46,8 @@ final class AppCoordinator: IdentifiableObject {
                     self?.toRoomsScreen()
                 case .toBookingScreen:
                     self?.toBookingScreen()
+                case .toPaidScreen:
+                    self?.toPaidScreen()
                 }
             }
             .store(in: &cancellables)
@@ -55,11 +60,18 @@ final class AppCoordinator: IdentifiableObject {
     }
     
     private func toBookingScreen() {
-        
+        bookingScreenViewModel = BookingScreenViewModel(bookingService: bookingService,
+                                                        navigationSubject: navigationSubject)
+    }
+    
+    private func toPaidScreen() {
+        paidScreenViewModel = PaidScreenViewModel(navigationSubject: navigationSubject)
     }
     
     private func popToRoot() {
-        
+        roomsScreenViewModel = nil
+        bookingScreenViewModel = nil
+        paidScreenViewModel = nil
     }
     
 }
@@ -70,6 +82,7 @@ extension AppCoordinator {
         case popToRoot
         case toRoomsScreen
         case toBookingScreen
+        case toPaidScreen
     }
 }
 

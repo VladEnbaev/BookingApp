@@ -6,52 +6,66 @@
   
 */
 
+// MARK: - Hotel Screen
+"first" = "First";
+"second" = "Second";
+"third" = "Third";
+"fourth" = "Fourth";
+"fifth" = "Fifth";
 
-//MARK: - Hotel Screen
-"hotel_navigation_title" = "Отель";
-"hotel_about_label" = "Об отеле";
-"hotel_to_room_button" = "К выбору номера";
-"hotel_price_from" = "От ";
+// MARK: - Hotel Screen
+"hotel_navigation_title" = "Hotel";
+"hotel_about_label" = "About Hotel";
+"hotel_to_room_button" = "Select a Room";
+"hotel_price_from" = "From ";
 
-"hotel_section_conviniences" = "Удобства";
-"hotel_section_included" = "Что включено";
-"hotel_section_not_included" = "Что не включено";
-"hotel_section_conviniences_subtitle" = "Самое необходимое";
+"hotel_section_conviniences" = "Amenities";
+"hotel_section_included" = "Included";
+"hotel_section_not_included" = "Not Included";
+"hotel_section_conviniences_subtitle" = "Essentials";
 
-//MARK: - Rooms Screen
-"rooms_choose_room_button" = "Выбрать номер";
-"rooms_detail_button" = "Подробнее о номере";
+// MARK: - Rooms Screen
+"rooms_choose_room_button" = "Choose a Room";
+"rooms_detail_button" = "Room Details";
 
-//MARK: - Booking Screen
-"booking_navigation_title" = "Бронирование";
+// MARK: - Booking Screen
+"booking_navigation_title" = "Booking";
 
-"booking_departure_from" = "Вылет из";
-"booking_country_city" = "Страна, город";
-"booking_dates" = "Даты";
-"booking_nights" = "Кол-во ночей";
-"booking_hotel" = "Отель";
-"booking_room" = "Номер";
-"booking_food" = "Питание";
+"booking_departure_from" = "Departure From";
+"booking_country_city" = "Country, City";
+"booking_dates" = "Dates";
+"booking_nights" = "Number of Nights";
+"booking_hotel" = "Hotel";
+"booking_room" = "Room";
+"booking_food" = "Food";
 
-"booking_buyer_info_title" = "Информация о покупателе";
-"booking_phone_number" = "Номер телефона";
-"booking_email" = "Почта";
-"booking_terms_of_use" = "Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту";
+"booking_buyer_info_title" = "Buyer Information";
+"booking_phone_number" = "Phone Number";
+"booking_email" = "Email";
+"booking_terms_of_use" = "This data is not shared with anyone. After payment, we will send a receipt to the phone number and email you provided.";
 
-"booking_tourist_of_number %@" = "%@ турист";
+"booking_tourist_of_number %@" = "%@ tourist";
 
-"booking_tourist_name" = "Имя";
-"booking_tourist_surname" = "Фамилия";
-"booking_tourist_birthday" = "Дата рождения";
-"booking_tourist_citizenship" = "Гражданство";
-"booking_tourist_passport" = "Номер загранпаспорта";
-"booking_tourist_passport_date" = "Срок действия загранпаспорта";
+"booking_tourist_name" = "Name";
+"booking_tourist_surname" = "Surname";
+"booking_tourist_birthday" = "Date of Birth";
+"booking_tourist_citizenship" = "Citizenship";
+"booking_tourist_passport" = "Passport Number";
+"booking_tourist_passport_date" = "Passport Expiry Date";
 
-"booking_add_torist" = "Добавить туриста";
+"booking_add_torist" = "Add Tourist";
 
-"booking_price_tour" = "Тур";
-"booking_price_fuel_charge" = "Топливный сбор";
-"booking_price_service_charge" = "Сервисный сбор";
-"booking_price_total" = "К оплате";
+"booking_price_tour" = "Tour";
+"booking_price_fuel_charge" = "Fuel Charge";
+"booking_price_service_charge" = "Service Charge";
+"booking_price_total" = "Total Amount";
 
-"booking_pay_button" = "Оплатить";
+"booking_pay_button %@" = "Pay %@";
+
+"booking_tourist" = "tourist";
+
+// MARK: - Paid Screen View
+"paid_super_button" = "Super!";
+"paid_navigation_title" = "Order Paid";
+"paid_title" = "Your order has been accepted";
+"paid_description_label %@" = "Order confirmation #%@ may take some time (from 1 hour to 24 hours). Once we receive a response from the tour operator, you will receive a notification by email.";

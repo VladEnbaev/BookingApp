@@ -23,11 +23,23 @@ struct RoomsScreenView: View {
             .padding(.top, 60)
         }
         .background(Color.backgroundScreen)
+        .onAppear {
+            viewModel.getRooms()
+        }
+        .blur(radius: viewModel.isIndicatorOn ? 4 : 0)
+        .overlay {
+            activityIndicator
+        }
         .overlay(alignment: .top) {
             SystemNavigationBar(title: "hotel_navigation_title")
         }
-        .onAppear {
-            viewModel.getRooms()
+    }
+    
+    @ViewBuilder
+    var activityIndicator: some View {
+        if viewModel.isIndicatorOn {
+            ProgressView()
+                .progressViewStyle(.circular)
         }
     }
 }

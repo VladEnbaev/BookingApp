@@ -11,8 +11,7 @@ import SwiftUI
 struct BookingApp: App {
     var body: some Scene {
         WindowGroup {
-            //AppCoordinatorView()
-            BookingScreenView(viewModel: .init(bookingService: BookingService(), navigationSubject: .init()))
+            AppCoordinatorView()
         }
     }
 }

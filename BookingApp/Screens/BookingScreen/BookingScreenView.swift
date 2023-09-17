@@ -17,10 +17,9 @@ struct BookingScreenView: View {
                 VStack(spacing: 8) {
                     hotelNameView
                     BookingInfoView(viewModel: viewModel)
-                    BuyerInfoView()
-                    BookingTouristView(label: "Первый турист")
-                    BookingTouristView(label: "Второй турист")
-                    AddTouristView(action: { })
+                    buyerInfoView
+                    touristViews
+                    AddTouristView(action: { viewModel.addTouristButtonTapped() })
                     PriceView(viewModel: viewModel)
                 }
                 .padding(.top, 55)
@@ -29,17 +28,32 @@ struct BookingScreenView: View {
             .background(Color.backgroundScreen)
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    AccentButton(text: "hotel_to_room_button") {
-                        //action
+                    AccentButton(text: "booking_pay_button \(viewModel.totalPrice)") {
+                        viewModel.payButtonTapped()
                     }
                 }
             }
         }
+        .onAppear {
+            viewModel.getBookingInfo()
+        }
+        .alert("Заполните все поля", isPresented: $viewModel.alertPresented) {
+            Button("OK") {
+                viewModel.alertPresented = true
+            }
+        }
+        .blur(radius: viewModel.isIndicatorOn ? 4 : 0)
+        .overlay {
+            activityIndicator
+        }
         .overlay(alignment: .top) {
             SystemNavigationBar(title: "booking_navigation_title")
         }
-        .onAppear {
-            viewModel.getBookingInfo()
+    }
+    
+    var touristViews: some View {
+        ForEach(viewModel.touristViewModels) { vm in
+            BookingTouristView(viewModel: vm)
         }
     }
     
@@ -53,7 +67,15 @@ struct BookingScreenView: View {
     }
     
     var buyerInfoView: some View {
-        BuyerInfoView()
+        BuyerInfoView(viewModel: viewModel.buyerInfoViewModel)
+    }
+    
+    @ViewBuilder
+    var activityIndicator: some View {
+        if viewModel.isIndicatorOn {
+            ProgressView()
+                .progressViewStyle(.circular)
+        }
     }
 }
 

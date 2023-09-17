@@ -8,6 +8,13 @@
 
 
 //MARK: - Hotel Screen
+"first" = "Первый";
+"second" = "Второй";
+"third" = "Третий";
+"fourth" = "Четвертый";
+"fifth" = "Пятый";
+
+//MARK: - Hotel Screen
 "hotel_navigation_title" = "Отель";
 "hotel_about_label" = "Об отеле";
 "hotel_to_room_button" = "К выбору номера";
@@ -37,3 +44,30 @@
 "booking_phone_number" = "Номер телефона";
 "booking_email" = "Почта";
 "booking_terms_of_use" = "Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту";
+
+"booking_tourist_of_number %@" = "%@ турист";
+
+"booking_tourist_name" = "Имя";
+"booking_tourist_surname" = "Фамилия";
+"booking_tourist_birthday" = "Дата рождения";
+"booking_tourist_citizenship" = "Гражданство";
+"booking_tourist_passport" = "Номер загранпаспорта";
+"booking_tourist_passport_date" = "Срок действия загранпаспорта";
+
+"booking_add_torist" = "Добавить туриста";
+
+"booking_price_tour" = "Тур";
+"booking_price_fuel_charge" = "Топливный сбор";
+"booking_price_service_charge" = "Сервисный сбор";
+"booking_price_total" = "К оплате";
+
+"booking_pay_button %@" = "Оплатить %@";
+
+"booking_tourist" = "турист";
+
+//MARK: - Paid Screen View
+"paid_super_button" = "Супер!";
+"paid_navigation_title" = "Заказ оплачен";
+"paid_title" = "Ваш заказ принят в работу";
+"paid_description_label %@" = "Подтверждение заказа № %@ может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление.";
+

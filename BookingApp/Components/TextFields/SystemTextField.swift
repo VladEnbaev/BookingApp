@@ -11,7 +11,14 @@ struct SystemTextField: View {
     
     var title: LocalizedStringKey
     @Binding var text: String
-    @FocusState var isFocused
+    @FocusState private var isFocused
+    private var isInvalid: Bool
+    
+    init(title: LocalizedStringKey, text: Binding<String>, isInvalid: Bool = false) {
+        self.title = title
+        self._text = text
+        self.isInvalid = isInvalid
+    }
     
     private var isExtended: Bool {
         isFocused || !text.isEmpty
@@ -39,13 +46,13 @@ struct SystemTextField: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, isExtended ? 10 : 16)
-        .background(Color.backgroundScreen)
+        .background(isInvalid ? Color.invalidBackground.opacity(0.15) : Color.backgroundScreen)
         .cornerRadius(10)
     }
 }
 
 struct SystemTextField_Previews: PreviewProvider {
     static var previews: some View {
-        SystemTextField(title: "PhoneNumber", text: .constant(""))
+        SystemTextField(title: "PhoneNumber", text: .constant(""), isInvalid: true)
     }
 }

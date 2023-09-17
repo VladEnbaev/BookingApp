@@ -15,28 +15,30 @@ struct HotelScreenView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 8) {
                 HotelMainInfoView(viewModel: viewModel)
-                    .overlay {
-                        activityIndicator
-                    }
                 AboutHotelView(viewModel: viewModel)
             }
             .padding(.top, 57)
         }
+        .navigationBarHidden(true)
         .background(Color.backgroundScreen)
         .onAppear {
             viewModel.getHotel()
-        }
-        .overlay(alignment: .top) {
-            SystemNavigationBar(title: "hotel_navigation_title", backButtonHidden: true)
         }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
                 AccentButton(text: "hotel_to_room_button") {
                     viewModel.toRoomButtonPressed()
                 }
+                .blur(radius: viewModel.isIndicatorOn ? 4 : 0)
             }
         }
-        
+        .blur(radius: viewModel.isIndicatorOn ? 4 : 0)
+        .overlay {
+            activityIndicator
+        }
+        .overlay(alignment: .top) {
+            SystemNavigationBar(title: "hotel_navigation_title", backButtonHidden: true)
+        }
     }
     
     @ViewBuilder

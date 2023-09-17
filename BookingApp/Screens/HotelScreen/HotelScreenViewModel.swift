@@ -58,30 +58,10 @@ final class HotelScreenViewModel: IdentifiableObject {
     }
     
     private func configurePrice(price: Double) {
-        self.price = CurrencyFormatter.format(price)
+        self.price = Formatter.format(currency: price)
     }
     
     func toRoomButtonPressed() {
         navigationSubject.send(.toRoomsScreen)
-    }
-}
-
-struct CurrencyFormatter {
-    
-    private init() {}
-    
-    static var formatter: NumberFormatter = {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .currency
-        numberFormatter.groupingSeparator = " "
-        numberFormatter.usesGroupingSeparator = true
-        numberFormatter.groupingSize = 3
-        numberFormatter.locale = Locale(identifier: "ru_RU")
-        numberFormatter.maximumFractionDigits = 0
-        return numberFormatter
-    }()
-    
-    static func format(_ currency: Double) -> String {
-        Self.formatter.string(from: NSNumber(value: currency)) ?? ""
     }
 }

@@ -17,4 +17,5 @@ extension Color {
     static var ratingBackground = Color("ratingBackground")
     static var ratingForeground = Color("ratingForeground")
     static var secondaryBackground = Color("secondaryBackground")
+    static var invalidBackground = Color("invalidBackground")
 }

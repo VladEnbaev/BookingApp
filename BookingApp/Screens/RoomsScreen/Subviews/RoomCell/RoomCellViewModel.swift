@@ -41,6 +41,6 @@ final class RoomCellViewModel: ObservableObject {
     }
     
     private func configurePrice(price: Double) {
-        self.price = CurrencyFormatter.format(price)
+        self.price = Formatter.format(currency: price)
     }
 }

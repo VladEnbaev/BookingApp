@@ -43,8 +43,9 @@ struct HotelMainInfoView: View {
                     .font(.custom(Fonts.regular, size: 16))
                     .foregroundColor(.contentSecondary)
             }
+            .padding(.bottom, 3)
             Spacer()
-        }.frame(height: 28)
+        }
     }
 }
 

@@ -20,5 +20,6 @@ enum Assets {
     }
     enum Images {
         static var placeholder = "placeholder"
+        static var partyPopper = "partyPopper"
     }
 }

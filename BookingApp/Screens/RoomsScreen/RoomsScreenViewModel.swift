@@ -12,6 +12,7 @@ import Combine
 @MainActor
 final class RoomsScreenViewModel: IdentifiableObject {
     @Published private(set) var rooms = [Room]()
+    @Published private(set) var isIndicatorOn = false
     
     var bookingService: BookingServiceProtocol
     var navigationSubject: PassthroughSubject<AppCoordinator.FlowType, Never>
@@ -25,9 +26,11 @@ final class RoomsScreenViewModel: IdentifiableObject {
     }
     
     func getRooms() {
+        isIndicatorOn = true
         Task {
             do {
                 rooms = try await bookingService.getRooms()
+                isIndicatorOn = false
             } catch {
                 print(error)
             }
@@ -41,6 +44,6 @@ final class RoomsScreenViewModel: IdentifiableObject {
 
 extension RoomsScreenViewModel: RoomCellParentViewModel {
     func chooseButtonTapped() {
-        //navigationSubject.send(.)
+        navigationSubject.send(.toBookingScreen)
     }
 }

@@ -5,8 +5,31 @@
 //  Created by Влад Енбаев on 15.09.2023.
 //
 
-import Foundation
+import SwiftUI
 import Combine
+
+enum Numbers: Int, CaseIterable {
+    case first = 1
+    case second
+    case third
+    case fourth
+    case fifth
+    
+    var localized: LocalizedStringKey {
+        switch self {
+        case .first:
+            return "first"
+        case .second:
+            return "second"
+        case .third:
+            return "third"
+        case .fourth:
+            return "fourth"
+        case .fifth:
+            return "fifth"
+        }
+    }
+}
 
 @MainActor
 final class BookingScreenViewModel: IdentifiableObject {
@@ -26,6 +49,14 @@ final class BookingScreenViewModel: IdentifiableObject {
     @Published private(set) var serviceCharge: String = ""
     @Published private(set) var totalPrice: String = ""
     
+    @Published var alertPresented = false
+    @Published private(set) var isIndicatorOn = false
+    
+    @Published private(set) var touristViewModels = [
+        BookingTouristViewModel(number: .first, isOpen: true)
+    ]
+    
+    @Published private(set) var buyerInfoViewModel = BuyerInfoViewModel()
     
     var bookingService: BookingServiceProtocol
     var navigationSubject: PassthroughSubject<AppCoordinator.FlowType, Never>
@@ -39,20 +70,46 @@ final class BookingScreenViewModel: IdentifiableObject {
     }
     
     func getBookingInfo() {
+        isIndicatorOn = true
         Task {
             do {
                 let bookingInfo = try await bookingService.getBookingInfo()
                 configure(with: bookingInfo)
+                isIndicatorOn = false
             } catch {
                 print(error)
             }
         }
     }
     
+    func payButtonTapped() {
+        if isTextFieldsInvalid() {
+            alertPresented = true
+        } else {
+            navigationSubject.send(.toPaidScreen)
+        }
+    }
+    
+    func addTouristButtonTapped() {
+        if touristViewModels.count < Numbers.allCases.count {
+            let number = Numbers(rawValue: touristViewModels.count + 1)!
+            touristViewModels.append(BookingTouristViewModel(number: number))
+        }
+    }
+    
+    private func isTextFieldsInvalid() -> Bool {
+        
+        let isInvalidTourists = touristViewModels.map({ $0.isInvalid() }).contains(true)
+        
+        let isInvalidBuyer =  buyerInfoViewModel.isInvalid()
+        
+        return isInvalidTourists || isInvalidBuyer
+    }
+    
     private func configure(with bookingInfo: BookingInfo) {
         hotelName = bookingInfo.hotelName
         hotelAddress = bookingInfo.hotelAdress
-        rating = bookingInfo.ratingName
+        rating = "\(bookingInfo.horating) \(bookingInfo.ratingName)"
         departure = bookingInfo.departure
         arrivalCountry = bookingInfo.arrivalCountry
         numberOfNights = String(bookingInfo.numberOfNights)
@@ -72,9 +129,9 @@ final class BookingScreenViewModel: IdentifiableObject {
     private func configurePrices(bookingInfo: BookingInfo) {
         let totalPrice = bookingInfo.fuelCharge + bookingInfo.serviceCharge + bookingInfo.tourPrice
         
-        self.totalPrice = CurrencyFormatter.format(totalPrice)
-        self.fuelCharge = CurrencyFormatter.format(bookingInfo.fuelCharge)
-        self.serviceCharge = CurrencyFormatter.format(bookingInfo.serviceCharge)
-        self.tourPrice = CurrencyFormatter.format(bookingInfo.tourPrice)
+        self.totalPrice = Formatter.format(currency: totalPrice)
+        self.fuelCharge = Formatter.format(currency: bookingInfo.fuelCharge)
+        self.serviceCharge = Formatter.format(currency: bookingInfo.serviceCharge)
+        self.tourPrice = Formatter.format(currency: bookingInfo.tourPrice)
     }
 }
