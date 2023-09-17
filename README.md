@@ -1,5 +1,7 @@
 # BookingApp
-SwiftUI + MVVM + Coordinator
-async/await
-ios 15+
-Languages: Russian, English
+
+### Technologies used:
+* SwiftUI + MVVM + Coordinator
+* async/await, URLSession, JSON
+* iOS 15+
+* Localization: Russian, English
