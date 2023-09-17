@@ -1,4 +1,5 @@
 # BookingApp
+A small hotel booking application with an interesting implementation of the Coordinator pattern, modern ios technologies and networking
 
 ### Technologies used:
 * SwiftUI + MVVM + Coordinator
